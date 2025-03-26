@@ -10,6 +10,7 @@
 
 ## Install
 It is recommended to use in Debian
+
 If ufw is running, this script will auto open 80 port and 443 port
 
     curl -O https://raw.githubusercontent.com/Catalina-sys456/easy-hysteria2/main/easy-hysteria2.sh && chmod u+x easy-hysteria2.sh
