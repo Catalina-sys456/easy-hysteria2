@@ -15,7 +15,7 @@
 ### Resolve your domain name to your server ip
 
 ### Switch to root user
-Just type the password,the password won't show on the screen
+Just type the password,it won't show on the screen
 
 ### Run
     ./easy-hysteria2.sh
