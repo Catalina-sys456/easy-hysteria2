@@ -20,6 +20,7 @@ If ufw is running, this script will auto open 80 port and 443 port
 
 ### Switch to root user
 Just type the password,it won't show on the screen
+    sudo su
 
 ### Run
     ./easy-hysteria2.sh
