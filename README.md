@@ -20,7 +20,7 @@ Just type the password,it won't show on the screen
 ### Run
     ./easy-hysteria2.sh
 
-### Order
+### Order explain
     1: Used to install hysteria2 for the first time and start the service. The script will automatically generate random passwords and configuration files for you
     2: Stop service but not uninstall
     3: Turn on service
