@@ -6,13 +6,15 @@
 
   [English](README.md)
 
-## 安装
+## 将你的域名解析到你的服务器ip
 
+## 安装
+推荐在debian中使用
+如果ufw正在运行，脚本会自动打开80端口与443端口
   curl -O https://raw.githubusercontent.com/Catalina-sys456/easy-hysteria2/main/easy-hysteria2.sh && chmod u+x easy-hysteria2.sh
 
 ## 使用方法
 
-### 将你的域名解析到你的服务器ip
 
 ### 切换到root用户
 输入root密码，密码不会显示在屏幕上
