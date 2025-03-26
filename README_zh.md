@@ -10,8 +10,10 @@
 
 ## 安装
 推荐在debian中使用
+
 如果ufw正在运行，脚本会自动打开80端口与443端口
-  curl -O https://raw.githubusercontent.com/Catalina-sys456/easy-hysteria2/main/easy-hysteria2.sh && chmod u+x easy-hysteria2.sh
+  
+    curl -O https://raw.githubusercontent.com/Catalina-sys456/easy-hysteria2/main/easy-hysteria2.sh && chmod u+x easy-hysteria2.sh
 
 ## 使用方法
 
