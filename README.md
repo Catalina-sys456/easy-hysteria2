@@ -6,6 +6,8 @@
 
  [Chinese](README_zh.md)
 
+## Resolve your domain name to your server ip
+
 ## Install
 It is recommended to use in Debian
 If ufw is running, this script will auto open 80 port and 443 port
@@ -14,7 +16,6 @@ If ufw is running, this script will auto open 80 port and 443 port
 
 ## How to use
 
-### Resolve your domain name to your server ip
 
 ### Switch to root user
 Just type the password,it won't show on the screen
