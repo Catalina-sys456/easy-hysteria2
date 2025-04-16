@@ -2,9 +2,6 @@
 
 # simple script to use hysteria2 easyly
 
-#random password
-password=$(openssl rand -base64 12)
-
 open_port(){
     if systemctl is-active --quiet ufw.service; then
 	ufw allow 80
@@ -23,6 +20,10 @@ uninstall_hysteria2(){
 read_domain_name(){
     read -p "type your domain name: " domain
     read -p "type the fake domain name (maybe bing.com is a good idea): " fake_domain
+}
+
+random_password(){
+    password=$(openssl rand -base64 12)
 }
 
 edit_config_file(){
@@ -61,13 +62,18 @@ performance_optimization(){
     chrt -r 99 $(pidof hysteria)
 }
 
-report(){
+report_and_creat_link_file(){
     if systemctl is-active --quiet hysteria-server.service; then
 	echo "installation success, your password is $password"
 	echo "URI link: hysteria2://$password@$domain:443/?sni=$domain&insecure=0"
+	echo "hysteria2://$password@$domain:443/?sni=$domain&insecure=0" > hysteria2_link.txt
     else
 	echo "field to install ,manual installation required"
     fi
+}
+
+show_link(){
+    cat hysteria2_link.txt
 }
 
 show_menu(){
@@ -75,7 +81,8 @@ show_menu(){
     echo "2. stop and disable hysteria2"
     echo "3. start and enable hysteria2"
     echo "4. stop and uninstall hysteria2"
-    read -p "[1/2/3/4] " choice
+    echo "5. show subscribe link"
+    read -p "[1/2/3/4/5] " choice
 }
 
 main(){
@@ -86,10 +93,11 @@ main(){
 	    open_port
 	    install_hysteria2
 	    read_domain_name
+	    random_password
 	    edit_config_file
-      start_enable
+            start_enable
 	    performance_optimization
-	    report
+	    report_and_creat_link_file
 	    ;;
 	2)
 	    stop_disable
@@ -97,11 +105,14 @@ main(){
 	3)
 	    start_enable
 	    performance_optimization
-      ;;
+            ;;
 	4)
 	    stop_disable
 	    uninstall_hysteria2
 	    ;;
+	5)
+	    show_link
+	    
     esac
 }
 
